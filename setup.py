@@ -7,7 +7,7 @@ def long_description():
 
 VERSION = "0.0.1"
 setuptools.setup(
-    name='singlebase-py',
+    name='singlebase',
     version=VERSION,
     author='Mardix/SinglebaseCloud.com',
     author_email='contact@singlebasecloud.com',
