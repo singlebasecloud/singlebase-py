@@ -6,7 +6,6 @@ import re
 import json
 import uuid
 import arrow
-import cuid2
 import datetime
 
 # Date format
@@ -14,20 +13,7 @@ FORMAT_ISO_DATE = "YYYY-MM-DD"
 FORMAT_ISO_TIME = "HH:mm:ss"
 FORMAT_ISO_DATETIME = "YYYY-MM-DD HH:mm:ss"
 
-DATES_FORMAT = {
-    "ISO_DATE": FORMAT_ISO_DATE,
-    "ISO_TIME": FORMAT_ISO_TIME,
-    "ISO_DATETIME": FORMAT_ISO_DATETIME
-}
 
-def gen_xid() -> str:
-    """
-    XID - To generate a random unique ID. 
-    Return CUID2. 16 chars
-    """
-    l = 16
-    return cuid2.Cuid(length=l).generate()
-    
 def gen_uuid() -> str:
     """
     To be used as UUID
@@ -57,7 +43,7 @@ def get_timestamp() -> int:
     Returns:
       int
     """
-    return round(datetime.datetime.utcnow().timestamp())
+    return round(arrow.utcnow().timestamp())
 
 
 # ----------------------

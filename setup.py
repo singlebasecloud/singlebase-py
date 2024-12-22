@@ -5,7 +5,7 @@ def long_description():
     with open('README.md', 'r') as file:
         return file.read()
 
-VERSION = "0.0.1"
+VERSION = "0.1.0"
 setuptools.setup(
     name='singlebase',
     version=VERSION,
@@ -22,7 +22,7 @@ setuptools.setup(
     ],
     python_requires='>=3.10.0',
     install_requires = [
-        "cuid2",
+        "aiohttp",
         "arrow",
         "requests"
     ],
